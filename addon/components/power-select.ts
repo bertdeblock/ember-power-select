@@ -90,7 +90,7 @@ export interface PowerSelectArgs {
 }
 
 const isSliceable = <T>(coll: any): coll is Sliceable<T> => {
-  return typeof coll.slice === 'function' && typeof coll.sort === 'function';
+  return typeof coll.slice === 'function' && typeof coll !== 'string';
 }
 
 const isPromiseLike = <T>(thing: any): thing is Promise<T> => {
